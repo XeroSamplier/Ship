@@ -1,0 +1,37 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #000;
+    color: #fff;
+    font-family: kamerik-3d;
+}
+.layers {
+    perspective: 1000px;
+    overflow: hidden;
+}
+.layers__container{
+    height: 100vh;
+    transform-style: preserve-3d;
+    transform: rotateX(var(--move-y)) rotateY(var(--move-x));
+}
+.layers__item {
+    position: absolute;
+    inset: -5vw;
+    background-size: cover;
+    background-position: center;
+    
+}
+.layer-1 {
+	transform: translateZ(-55px) scale(1.06);
+}
+.layer-2 {
+	transform: translateZ(190px) scale(.9);
+}
+.layer-3 {
+	transform: translateZ(380px);
+    display: none;
+}
